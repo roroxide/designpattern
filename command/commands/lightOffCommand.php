@@ -2,7 +2,7 @@
 
 include_once __DIR__."/../abstracts/command.php";
 
-class LightOn implements Command
+class LightOffCommand implements Command
 {
     var $device;
 
@@ -12,6 +12,11 @@ class LightOn implements Command
     }
 
     public function execute()
+    {
+        $this->light->off();
+    }
+
+    public function undo()
     {
         $this->light->on();
     }
