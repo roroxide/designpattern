@@ -8,6 +8,7 @@ Design Pattern Principles :
 + Classes should be open for extension, but closed for modification.
 + Depend upon abstractions. Do not depend upon concrete classes.
 + Don't call us, we'll call you.
++ A class should have only one reason to change.
 
 Dependency Inversion Principles :
 
