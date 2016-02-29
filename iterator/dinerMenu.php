@@ -1,9 +1,10 @@
 <?php
 
+include_once __DIR__."/menu.php";
 include_once __DIR__."/menuItem.php";
 include_once __DIR__."/dinerIterator.php";
 
-class DinerMenu
+class DinerMenu implements Menu
 {
     var $menuItems;
     var $maxItems = 5;

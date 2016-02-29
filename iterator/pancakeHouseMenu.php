@@ -1,9 +1,10 @@
 <?php
 
+include_once __DIR__."/menu.php";
 include_once __DIR__."/menuItem.php";
 include_once __DIR__."/pancakeHouseIterator.php";
 
-class PancakeHouseMenu
+class PancakeHouseMenu implements Menu
 {
     var $menuItems;
 
