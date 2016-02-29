@@ -1,11 +1,9 @@
 <?php
 
-include __DIR__."/pancakeHouseIterator.php";
-include __DIR__."/pancakeHouseMenu.php";
+include_once __DIR__."/waitress.php";
 
-$menu = new PancakeHouseMenu;
-$iterator = $menu->createIterator();
+$menu1 = new PancakeHouseMenu();
+$menu2 = new DinerMenu();
 
-while ( $iterator->hasNext() ) {
-    echo $iterator->getNext()."\n";
-}
+$waitress = new Waitress($menu1, $menu2);
+$waitress->printAllMenus();

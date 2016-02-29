@@ -26,9 +26,4 @@ class PancakeHouseMenu
     {
         return new PancakeHouseIterator($this->menuItems);
     }
-
-    public function getMenuItems()
-    {
-        return $this->menuItems;
-    }
 }
