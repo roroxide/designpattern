@@ -5,24 +5,24 @@ include_once __DIR__."/menuIterator.php";
 class PancakeHouseIterator implements menuIterator
 {
     var $index;
-    var $myArray;
+    var $menu;
 
-    public function __construct($myArray)
+    public function __construct($pancakeHouseMenu)
     {
-        $this->myArray = $myArray->getMenuItems();
+        $this->menu = $pancakeHouseMenu;
         $this->index = 0;
     }
 
     public function hasNext()
     {
-        return isset($this->myArray[$this->index]);
+        return isset($this->menu[$this->index]);
     }
 
     public function getNext()
     {
         $value = null;
-        if ( isset($this->myArray[$this->index]) ) {
-            $value = $this->myArray[$this->index];
+        if ( isset($this->menu[$this->index]) ) {
+            $value = $this->menu[$this->index];
             $this->index++;
         }
         return $value;

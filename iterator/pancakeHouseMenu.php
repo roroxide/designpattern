@@ -1,6 +1,7 @@
 <?php
 
-include __DIR__."/menuItem.php";
+include_once __DIR__."/menuItem.php";
+include_once __DIR__."/pancakeHouseIterator.php";
 
 class PancakeHouseMenu
 {
@@ -19,6 +20,11 @@ class PancakeHouseMenu
     public function addItem($name, $price)
     {
         $this->menuItems[] = new MenuItem($name, $price);
+    }
+
+    public function createIterator()
+    {
+        return new PancakeHouseIterator($this->menuItems);
     }
 
     public function getMenuItems()

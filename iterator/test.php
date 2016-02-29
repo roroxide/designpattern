@@ -3,9 +3,9 @@
 include __DIR__."/pancakeHouseIterator.php";
 include __DIR__."/pancakeHouseMenu.php";
 
-$pancakeHouseMenu = new PancakeHouseMenu();
-$phIterator = new pancakeHouseIterator($pancakeHouseMenu);
+$menu = new PancakeHouseMenu;
+$iterator = $menu->createIterator();
 
-while ( $phIterator->hasNext() ) {
-    echo $phIterator->getNext()."\n";
+while ( $iterator->hasNext() ) {
+    echo $iterator->getNext()."\n";
 }
